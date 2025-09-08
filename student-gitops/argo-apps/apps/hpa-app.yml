@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hpa
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/student-attendance-system/student-gitops.git'
+    targetRevision: HEAD
+    path: hpa
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
