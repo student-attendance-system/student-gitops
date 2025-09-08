@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/student-attendance-system/student-gitops.git'
+    repoURL: 'https://github.com/student-attendance-system/student-service.git'
     targetRevision: HEAD
-    path: student-service/k8s   # folder containing both frontend + backend manifests
+    path: k8s   # folder containing both frontend + backend manifests
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
