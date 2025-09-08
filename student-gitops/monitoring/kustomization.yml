@@ -7,4 +7,6 @@ resources:
   - prometheus/deploy.yml
   - prometheus/service.yml
   - prometheus/configmap.yml
+  - node-exporter/deamonset.yml
+  - node-exporter/service.yml
 
