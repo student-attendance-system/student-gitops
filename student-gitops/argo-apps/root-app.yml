@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/<your-github-username>/student-gitops.git'
+    repoURL: 'https://github.com/student-attendance-system/student-gitops.git'
     targetRevision: HEAD
     path: argo-apps/apps
   destination:
