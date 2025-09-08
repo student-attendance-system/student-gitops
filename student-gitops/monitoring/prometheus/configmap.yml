@@ -7,6 +7,7 @@ data:
   prometheus.yml: |
     global:
       scrape_interval: 15s
+
     scrape_configs:
       # Scrape all pods with Prometheus annotations
       - job_name: 'kubernetes-pods'
@@ -21,3 +22,13 @@ data:
             regex: (.+)
             target_label: __address__
             replacement: $1
+
+      # Scrape Node Exporter running on all nodes
+      - job_name: 'node-exporter'
+        kubernetes_sd_configs:
+          - role: endpoints
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_service_label_app]
+            action: keep
+            regex: node-exporter
+
