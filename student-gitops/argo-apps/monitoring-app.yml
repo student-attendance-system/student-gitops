@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/<your-org>/student-gitops.git'
-    targetRevision: main
+    repoURL: 'https://github.com/student-attendance-system/student-gitops.git'
+    targetRevision: HEAD
     path: student-gitops/monitoring
   destination:
     server: 'https://kubernetes.default.svc'
