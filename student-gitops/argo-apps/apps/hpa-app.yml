@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/student-attendance-system/student-gitops.git'
     targetRevision: HEAD
-    path: student-gitops/hpa
+    path: student-gitops/hpa/workloads
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
